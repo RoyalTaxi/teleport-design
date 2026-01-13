@@ -7,7 +7,7 @@ plugins {
     `maven-publish`
 }
 
-group = "uz.yalla"
+group = "uz.teleport"
 version = "1.0.0"
 
 
@@ -38,7 +38,7 @@ kotlin {
 }
 
 android {
-    namespace = "uz.yalla.firebase"
+    namespace = "uz.teleport.design"
     compileSdk = 35
 
     defaultConfig {
@@ -55,7 +55,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/RoyalTaxi/yalla-firebase")
+            url = uri("https://maven.pkg.github.com/RoyalTaxi/teleport-design")
             credentials {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
                 password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
@@ -69,7 +69,7 @@ afterEvaluate {
         publications.withType<MavenPublication>().configureEach {
             val baseName = rootProject.name
             if (artifactId.startsWith(baseName)) {
-                artifactId = artifactId.replace(baseName, "firebase")
+                artifactId = artifactId.replace(baseName, "design")
             }
         }
     }
