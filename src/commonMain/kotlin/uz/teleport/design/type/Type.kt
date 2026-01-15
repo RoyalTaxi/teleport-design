@@ -1,15 +1,15 @@
-package uz.teleport.core.presentation.design.type
+package uz.teleport.design.type
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.sp
-import teleport.composeapp.generated.resources.Res
 import org.jetbrains.compose.resources.Font
-import teleport.composeapp.generated.resources.inter_bold
-import teleport.composeapp.generated.resources.inter_medium
-import teleport.composeapp.generated.resources.inter_regular
-import teleport.composeapp.generated.resources.inter_semi_bold
+import uz.teleport.resources.Res
+import uz.teleport.resources.inter_bold
+import uz.teleport.resources.inter_medium
+import uz.teleport.resources.inter_regular
+import uz.teleport.resources.inter_semi_bold
 
 @Composable
 fun rememberTypeScheme() : TypeScheme {

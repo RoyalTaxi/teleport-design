@@ -1,9 +1,9 @@
-package uz.teleport.core.presentation.design.theme
+package uz.teleport.design.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import uz.teleport.core.presentation.design.color.light
-import uz.teleport.core.presentation.design.type.rememberTypeScheme
+import uz.teleport.design.color.light
+import uz.teleport.design.type.rememberTypeScheme
 
 @Composable
 fun Theme(

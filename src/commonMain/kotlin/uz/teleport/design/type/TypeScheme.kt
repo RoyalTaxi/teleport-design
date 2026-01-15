@@ -1,4 +1,4 @@
-package uz.teleport.core.presentation.design.type
+package uz.teleport.design.type
 
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle

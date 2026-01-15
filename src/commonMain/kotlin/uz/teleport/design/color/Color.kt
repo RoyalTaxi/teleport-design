@@ -1,4 +1,4 @@
-package uz.teleport.core.presentation.design.color
+package uz.teleport.design.color
 
 import androidx.compose.ui.graphics.Color
 

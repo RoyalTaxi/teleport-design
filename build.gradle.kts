@@ -3,7 +3,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
-    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.compose.compiler)
     `maven-publish`
 }
 
@@ -31,8 +32,18 @@ kotlin {
     }
 
     sourceSets {
+        commonMain.dependencies {
+            api(libs.teleport.resources)
+            implementation(compose.runtime)
+            implementation(compose.foundation)
+            implementation(compose.material3)
+            implementation(compose.ui)
+            implementation(compose.components.resources)
+        }
+
         androidMain.dependencies {
-            implementation(libs.androidx.core.ktx)
+            implementation(compose.uiTooling)
+            implementation("androidx.core:core-ktx:1.15.0")
         }
     }
 }
